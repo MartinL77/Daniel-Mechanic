@@ -1,6 +1,7 @@
+import React from "react";
 import Image from "next/image"
 
-export const imageComponent = () => (
+export const ImageComponent: React.FC = () => (
     <Image 
         src="/images/bleach.jpg"
         height={144}

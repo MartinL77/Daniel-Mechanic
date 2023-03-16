@@ -1,7 +1,7 @@
 import Head from 'next/head'
 import Link from "next/link";
 
-import { imageComponent } from '@component/components/image';
+import { ImageComponent } from '@component/components/image';
 
 const FirstPost: React.FC = () => {
     return (

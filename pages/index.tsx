@@ -1,7 +1,10 @@
 import Head from 'next/head'
 import Link from 'next/link'
+import styled from 'styled-components'
 
-import { HeaderComponent } from '@component/components/Header/Header'
+import { Nav } from '@component/components/Nav/Nav'
+import { Car } from '@component/components/Car/Car'
+
 
 // Header: 
 // Nav
@@ -12,9 +15,23 @@ import { HeaderComponent } from '@component/components/Header/Header'
 
 const HomePage: React.FC = () => {
   return (
-    <HeaderComponent/>
+    <HomePageContainer>
+    <Nav></Nav>
+    <HomeContentWrapper>
+      <Car></Car>
+    </HomeContentWrapper>
+    </HomePageContainer>
   )
 }
+
+const HomePageContainer = styled.div`
+  height: 100vh;
+`;
+
+const HomeContentWrapper = styled.div`
+  background-color: green;
+  height: 100%;
+`;
 
 export default HomePage;
 
