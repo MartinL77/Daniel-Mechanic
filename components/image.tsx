@@ -4,8 +4,8 @@ import Image from "next/image"
 export const ImageComponent: React.FC = () => (
     <Image 
         src="/images/bleach.jpg"
-        height={144}
-        width={144}
+        height={100}
+        width={100}
         alt="bleach"
     />
 );

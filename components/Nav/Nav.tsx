@@ -16,7 +16,12 @@ export const Nav: React.FC = () => {
     return (
         <>
             <NavContainer>
-            
+                <Hamburger>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </Hamburger>
+                <NavWrapper>
                 <NavLogo>
                     <Link href={"./"}>
                         <ImageComponent />
@@ -24,23 +29,59 @@ export const Nav: React.FC = () => {
                 </NavLogo>
                 <MenuWrapper>
                 <Menu>
-                    <MenuLink><Link href={"./"}><h2>Home</h2></Link></MenuLink>
-                    <MenuLink><Link href={""}><h2>Services</h2></Link></MenuLink>
-                    <MenuLink><Link href={""}><h2>About</h2></Link></MenuLink>
-                    <MenuLink><Link href={""}><h2>Contact</h2></Link></MenuLink>
+                    <MenuLink><Link href={"./"}><h3>Home</h3></Link></MenuLink>
+                    <MenuLink><Link href={""}><h3>Services</h3></Link></MenuLink>
+                    <MenuLink><Link href={""}><h3>About</h3></Link></MenuLink>
+                    <MenuLink><Link href={""}><h3>Contact</h3></Link></MenuLink>
                 </Menu>
-                <MenuLinkLast><Link href={""}><h2>Request A Quote</h2></Link></MenuLinkLast>
+                <MenuLinkLast><Link href={""}><h3>Request A Quote</h3></Link></MenuLinkLast>
                 </MenuWrapper>
+                </NavWrapper>
             </NavContainer>
         </>
     )
 }
 
 const MenuWrapper = styled.div`
-    background: lightblue;
     display: flex;
+    align-items: center;
     white-space: nowrap;
     width: 100%;
+    overflow: hidden;
+
+    @media screen and (max-width: 750px) {
+        display: flex;
+        flex-direction: column;
+    }
+`
+
+const NavWrapper = styled.div`
+    display: flex;
+    width: 100%;
+    
+    @media screen and (max-width: 750px) {
+        display: flex;
+        flex-direction: column;
+    }
+`
+
+const Hamburger = styled.div`
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+    position: absolute;
+    right: 0;
+    top: 0;
+    margin-right: 10px;
+    margin-top: 20px;
+
+    span {
+        height: 2px;
+        width: 25px;
+        background-color: blue;
+        margin-bottom: 4px;
+        border-radius: 5px;
+    }
 `
 
 {/* <div className="" >

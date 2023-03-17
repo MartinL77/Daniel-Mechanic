@@ -13,7 +13,7 @@ import { Car } from '@component/components/Car/Car'
 
 // footer: 
 
-const HomePage: React.FC = () => {
+export const HomePage: React.FC = () => {
   return (
     <HomePageContainer>
     <Nav></Nav>
@@ -29,8 +29,12 @@ const HomePageContainer = styled.div`
 `;
 
 const HomeContentWrapper = styled.div`
-  background-color: green;
+  background-color: #f1f1f1;
   height: 100%;
+  
+  /* @media screen and (max-width: 920px) {
+    width: 924.16px;
+  }; */
 `;
 
 export default HomePage;
