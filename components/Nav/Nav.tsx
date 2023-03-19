@@ -22,25 +22,27 @@ export const Nav: React.FC = () => {
                     <span></span>
                 </Hamburger>
                 <NavWrapper>
-                <NavLogo>
-                    <Link href={"./"}>
-                        <ImageComponent />
-                    </Link>
-                </NavLogo>
-                <MenuWrapper>
-                <Menu>
-                    <MenuLink><Link href={"./"}><h3>Home</h3></Link></MenuLink>
-                    <MenuLink><Link href={""}><h3>Services</h3></Link></MenuLink>
-                    <MenuLink><Link href={""}><h3>About</h3></Link></MenuLink>
-                    <MenuLink><Link href={""}><h3>Contact</h3></Link></MenuLink>
-                </Menu>
-                <MenuLinkLast><Link href={""}><h3>Request A Quote</h3></Link></MenuLinkLast>
-                </MenuWrapper>
+                    <NavLogo>
+                        <Link href={"./"}>
+                            <ImageComponent />
+                        </Link>
+                    </NavLogo>
+                    <MenuWrapper>
+                        <Menu>
+                            <MenuLink><Link href={"./"}><h3>Home</h3></Link></MenuLink>
+                            <MenuLink><Link href={""}><h3>Services</h3></Link></MenuLink>
+                            <MenuLink><Link href={""}><h3>About</h3></Link></MenuLink>
+                            <MenuLink><Link href={""}><h3>Contact</h3></Link></MenuLink>
+                        </Menu>
+                        <MenuLinkLast><Link href={""}><h3>Request A Quote</h3></Link></MenuLinkLast>
+                    </MenuWrapper>
                 </NavWrapper>
             </NavContainer>
         </>
     )
-}
+};
+
+// ORGANISE BELOW STYLES TO CORRECT FILES
 
 const MenuWrapper = styled.div`
     display: flex;
