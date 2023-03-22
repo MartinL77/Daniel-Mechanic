@@ -1,5 +1,6 @@
 import React from "react";
 
+import { useRouter } from 'next/router'
 import Image from "next/image";
 import Link from "next/link";
 import styled from "styled-components";
@@ -13,6 +14,7 @@ import { MenuLinkLast } from "./Nav.styled";
 
 
 export const Nav: React.FC = () => {
+    const router = useRouter()
     return (
         <>
             <NavContainer>
@@ -29,10 +31,10 @@ export const Nav: React.FC = () => {
                     </NavLogo>
                     <MenuWrapper>
                         <Menu>
-                            <MenuLink><Link href={"./"}><h3>Home</h3></Link></MenuLink>
-                            <MenuLink><Link href={""}><h3>Services</h3></Link></MenuLink>
-                            <MenuLink><Link href={""}><h3>About</h3></Link></MenuLink>
-                            <MenuLink><Link href={""}><h3>Contact</h3></Link></MenuLink>
+                            <MenuLink><Link href={"/"}><h3>Home</h3></Link></MenuLink>
+                            <MenuLink><Link href={"#services"}><h3>Services</h3></Link></MenuLink>
+                            <MenuLink><Link href={"#about"}><h3>About</h3></Link></MenuLink>
+                            <MenuLink><Link href={"#contact"}><h3>Contact</h3></Link></MenuLink>
                         </Menu>
                         <MenuLinkLast><Link href={""}><h3>Request A Quote</h3></Link></MenuLinkLast>
                     </MenuWrapper>

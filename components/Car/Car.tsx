@@ -6,8 +6,8 @@ export const Car: React.FC = () => {
         <>
             <Image
                 src="/images/daniel-golf.png"
-                height={300}
-                width={300}
+                height={500}
+                width={500}
                 alt="bleach"
             />
         </>
