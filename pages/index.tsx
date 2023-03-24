@@ -6,6 +6,9 @@ import { Nav } from '@component/components/Nav/Nav'
 import { Car } from '@component/components/Car/Car'
 import { CarText } from '@component/components/CarText/CarText'
 
+import { FaArrowRight } from "react-icons/fa";
+
+
 
 // Header: 
 // Nav
@@ -21,32 +24,40 @@ export const HomePage: React.FC = () => {
       <HomeContentWrapper>
         <CarSection>
           <CarMainContent>
-          <CarTextWrapper>
-          <CarText></CarText>
-          </CarTextWrapper>
-          <CarWrapper>
-            <CarSubText>Redefining the art of car detailing</CarSubText>
-          <Car></Car>
-          </CarWrapper>
+            <CarTextWrapper>
+              <CarText></CarText>
+            </CarTextWrapper>
+            <CarWrapper>
+              <CarSubText>
+                <h4>Redefining the art of car detailing</h4>
+                <Link href={''}>
+                  <div>
+                    <span>Book A Wash</span>
+                    <FaArrowRight />
+                  </div>
+                </Link>
+              </CarSubText>
+              <Car></Car>
+            </CarWrapper>
           </CarMainContent>
           <CarFooter>
-          <CarFooterTextWrapper>
-          <CarFooterCall>
-            CALL US NOW AT:
-            0477 888 999
-          </CarFooterCall>
-          <CarFooterLocation>
-            OUR LOCATION:
-            MCG, Melbourne
-          </CarFooterLocation>
-          </CarFooterTextWrapper>
-        </CarFooter>
+            <CarFooterTextWrapper>
+              <CarFooterCall>
+                <h4>CALL US NOW AT:</h4>
+                <span>0477 888 999</span>
+              </CarFooterCall>
+              <CarFooterLocation>
+                <h4>OUR LOCATION:</h4>
+                <span>MCG, Melbourne</span>
+              </CarFooterLocation>
+            </CarFooterTextWrapper>
+          </CarFooter>
         </CarSection>
       </HomeContentWrapper>
       <PromiseContentWrapper>
       </PromiseContentWrapper>
       <ServicesContentWrapper>
-      <div id="services">Services Section</div>
+        <div id="services">Services Section</div>
       </ServicesContentWrapper>
       <AboutContentWrapper>
         <div id="about">About us</div>
@@ -129,31 +140,70 @@ overflow: hidden;
 `;
 
 const CarSubText = styled.div`
-  font-size: 10px;
+  font-size: 14px;
+  margin: 0 auto;
+  padding: 40px 0;
+
+  h4 {
+    font-weight: 200;
+    padding-bottom: 10px;
+
+  }
+
+  span {
+    color: #1E90FF;
+    font-weight: 700;
+    padding-right: 5px;
+    text-decoration: none;
+  }
+
+  div {
+    display: flex;
+    flex-direction: row;
+  }
+
+  svg {
+    color: #1E90FF;
+  }
+
+  a {
+    text-decoration: none;
+  }
 `;
 
 const CarFooter = styled.div`
 display: flex;
-justify-content: space-evenly;
 width: 100%;
 height: 125px;
 position: absolute;
 bottom: 0;
 background-color: lightgrey;
+line-height: 30px;
+
+h4 {
+  color: grey;
+  font-weight: 500;
+  font-size: 12px;
+}
+
+span {
+  color: #000836;
+}
 `;
 
 const CarFooterCall = styled.div`
-  font-size: 20px;
-  margin: 20px 70px;
+  padding: 0 50px 0 100px;
   display: flex;
-  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  border-right: solid 1px gray;
 `;
 
 const CarFooterLocation = styled.div`
-  font-size: 20px;
-  margin: 20px 70px;
+  padding: 0 50px;
   display: flex;
-  align-items: center;
+  flex-direction: column;
+  justify-content: center;
 `;
 
 const CarFooterTextWrapper = styled.div`

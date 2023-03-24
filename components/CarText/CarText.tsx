@@ -4,7 +4,7 @@ import styled from "styled-components";
 export const CarText:React.FC = () => {
     return (
         <>
-        <CarHeading>Your Car In <span>Immaculate Condition</span> Always</CarHeading>
+        <CarHeading><div>Your Car In</div><span>Immaculate Condition</span><div>Always</div></CarHeading>
         </>
     )
 }
@@ -17,7 +17,10 @@ const CarHeading = styled.div`
     span {
         color: #1E90FF;
     }
-
+    
+    div {
+        color: #000836;
+    }
 `
 
 
