@@ -32,8 +32,10 @@ export const HomePage: React.FC = () => {
                 <h4>Redefining the art of car detailing</h4>
                 <Link href={''}>
                   <div>
-                    <span>Book A Wash</span>
-                    <FaArrowRight />
+                    <a href="">
+                      <span>Book A Wash</span>
+                      <FaArrowRight />
+                    </a>
                   </div>
                 </Link>
               </CarSubText>
@@ -43,8 +45,10 @@ export const HomePage: React.FC = () => {
           <CarFooter>
             <CarFooterTextWrapper>
               <CarFooterCall>
-                <h4>CALL US NOW AT:</h4>
-                <span>0477 888 999</span>
+                <div>
+                  <h4>CALL US NOW AT:</h4>
+                  <span>0477 888 999</span>
+                </div>
               </CarFooterCall>
               <CarFooterLocation>
                 <h4>OUR LOCATION:</h4>
@@ -177,7 +181,7 @@ width: 100%;
 height: 125px;
 position: absolute;
 bottom: 0;
-background-color: lightgrey;
+background-color: gainsboro;
 line-height: 30px;
 
 h4 {
@@ -192,11 +196,20 @@ span {
 `;
 
 const CarFooterCall = styled.div`
-  padding: 0 50px 0 100px;
+  padding: 0 50px 0 150px;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  border-right: solid 1px gray;
+
+  div.after {
+    content: "";
+  background: black;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  height: 100%;
+  width: 5px;
+  }
 `;
 
 const CarFooterLocation = styled.div`
