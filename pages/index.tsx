@@ -7,6 +7,7 @@ import { Car } from '@component/components/Car/Car'
 import { CarText } from '@component/components/CarText/CarText'
 
 import { FaArrowRight } from "react-icons/fa";
+import css from 'styled-jsx/css'
 
 
 
@@ -32,10 +33,8 @@ export const HomePage: React.FC = () => {
                 <h4>Redefining the art of car detailing</h4>
                 <Link href={''}>
                   <div>
-                    <a href="">
-                      <span>Book A Wash</span>
-                      <FaArrowRight />
-                    </a>
+                    <span>Book A Wash</span>
+                    <FaArrowRight />
                   </div>
                 </Link>
               </CarSubText>
@@ -59,6 +58,25 @@ export const HomePage: React.FC = () => {
         </CarSection>
       </HomeContentWrapper>
       <PromiseContentWrapper>
+        <PromiseSection>
+          <HeaderText>
+            Based On <span>Experience</span>
+          </HeaderText>
+          <PromiseContent>
+            <PromiseImageMain>
+              <img src="/images/bleach.jpg" alt="" />
+            </PromiseImageMain>
+            <PromiseImageMinorWrapper>
+              <PromiseImageMinor>
+                <img src="/images/bleach.jpg" alt="" />
+                <img src="/images/bleach.jpg" alt="" />
+              </PromiseImageMinor>
+              <h4>Our Statistics</h4>
+              <p>We have more than 10+ years of car services experience</p>
+              <p>We have more than 1.5k+ vehicles serviced</p>
+            </PromiseImageMinorWrapper>
+          </PromiseContent>
+        </PromiseSection>
       </PromiseContentWrapper>
       <ServicesContentWrapper>
         <div id="services">Services Section</div>
@@ -93,8 +111,41 @@ const HomeContentWrapper = styled.div`
 `;
 
 const PromiseContentWrapper = styled.div`
-  background-color: blue;
+  background-color: #000836;
   height: 100vh ;
+
+  overflow: hidden;
+`;
+
+const PromiseSection = styled.div`
+  margin: 0px 150px;
+  padding-top: 50px;
+
+  img {
+    width: 200px;
+    height: 200px;
+  }
+`;
+
+const HeaderText = styled.div`
+display: flex;
+color: white;
+`;
+
+const PromiseContent = styled.div`
+  display: flex;
+`;
+
+const PromiseImageMain = styled.div`
+  
+`;
+
+const PromiseImageMinorWrapper = styled.div`
+  
+`;
+
+const PromiseImageMinor = styled.div`
+
 `;
 
 const ServicesContentWrapper = styled.div`
